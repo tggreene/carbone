@@ -106,9 +106,21 @@ function print (d, message) {
   return message;
 }
 
+/**
+ * URL Encode string
+ *
+ * @version 0.13.0
+ *
+ * @example [ "My Car", "My%20Car" ]
+ *
+ * @param  {String} d string to url encode
+ * @return {String} encoded string, or d
+ */
 function urlEncode (d) {
-  console.log('urlEncode', d, encodeURIComponent(d));
-  return encodeURIComponent(d);
+  if (typeof d === 'string') {
+    return encodeURIComponent(d);
+  }
+  return d;
 }
 
 /**
