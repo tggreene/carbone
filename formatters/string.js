@@ -106,6 +106,11 @@ function print (d, message) {
   return message;
 }
 
+function urlEncode (d) {
+  console.log('urlEncode', d, encodeURIComponent(d));
+  return encodeURIComponent(d);
+}
+
 /**
  * Convert user-defined enums to human readable values
  *
@@ -281,6 +286,7 @@ module.exports = {
   upperCase : upperCase,
   ucFirst   : ucFirst,
   ucWords   : ucWords,
+  urlEncode : urlEncode,
   convEnum  : convEnum,
   convCRLF  : convCRLF,
   unaccent  : unaccent,
